@@ -61,7 +61,7 @@
         [<a href="#">EN</a>] [<a href="#zh">中文</a>]
       </span>
     </h1>
-    <p class="subtitle" data-zh="QuickAPI（Chrome 扩展）<br>最后更新：2026 年 5 月 30 日" data-en="QuickAPI (Chrome Extension)<br>Last updated: May 30, 2026">QuickAPI (Chrome Extension)<br>Last updated: May 30, 2026</p>
+    <p class="subtitle" data-zh="QuickAPI（浏览器扩展）<br>最后更新：2026 年 5 月 30 日" data-en="QuickAPI (Browser Extension)<br>Last updated: May 30, 2026">QuickAPI (Browser Extension)<br>Last updated: May 30, 2026</p>
 
     <!-- ==================== 中文部分 ==================== -->
     <div id="zh" style="display:none;">
@@ -94,14 +94,14 @@
 
       <h2 id="s3">三、数据存储与安全</h2>
       <ul>
-        <li><span class="check">✔</span> 所有数据通过 <code>chrome.storage.local</code> API 存储于您的设备本地</li>
+        <li><span class="check">✔</span> 所有数据通过 <code>browser.storage.local</code> API 存储于您的设备本地</li>
         <li><span class="check">✔</span> 数据不会离开您的浏览器，不经过任何网络传输</li>
         <li><span class="check">✔</span> 卸载扩展后，所有本地存储数据将被自动清除</li>
         <li><span class="check">✔</span> 用户可在扩展设置中随时清除全部存储数据</li>
       </ul>
 
       <h2 id="s4">四、权限使用说明</h2>
-      <p>本扩展申请了以下 Chrome 权限，具体用途如下：</p>
+      <p>本扩展申请了以下浏览器权限，具体用途如下：</p>
       <table>
         <tr><th width="25%">权限</th><th>用途</th></tr>
         <tr><td><code>host_permissions: &lt;all_urls&gt;</code></td><td>允许向用户指定的任意 URL 发送 HTTP 请求（GET/POST/PUT/DELETE/PATCH 等）。这是本扩展的核心功能，仅当用户主动点击「发送」按钮时才会发起网络请求。</td></tr>
@@ -165,14 +165,14 @@
 
       <h2>3. Data Storage & Security</h2>
       <ul>
-        <li><span class="check">✔</span> All data is stored via <code>chrome.storage.local</code> on your local device</li>
+        <li><span class="check">✔</span> All data is stored via <code>browser.storage.local</code> on your local device</li>
         <li><span class="check">✔</span> Data never leaves your browser; no network transmission involved</li>
         <li><span class="check">✔</span> All stored data is automatically deleted when you uninstall the Extension</li>
         <li><span class="check">✔</span> Users can clear all stored data at any time via extension settings</li>
       </ul>
 
       <h2>4. Permissions Used</h2>
-      <p>The Extension requests the following Chrome permissions:</p>
+      <p>The Extension requests the following browser permissions:</p>
       <table>
         <tr><th width="25%">Permission</th><th>Purpose</th></tr>
         <tr><td><code>host_permissions: &lt;all_urls&gt;</code></td><td>Allows sending HTTP requests (GET/POST/PUT/DELETE/PATCH) to any URL specified by the user. This is the core functionality of the Extension. Requests are only initiated when the user actively clicks "Send".</td></tr>
@@ -206,7 +206,7 @@
     </div>
 
     <footer>
-      QuickAPI &copy; 2026 &mdash; This privacy policy page is hosted for Chrome Web Store compliance.
+      QuickAPI &copy; 2026 &mdash; This privacy policy page is hosted for extension store compliance.
     </footer>
   </div>
 
@@ -221,8 +221,8 @@
       document.querySelector('h1').childNodes[0].textContent = isZh ? '隐私政策' : 'Privacy Policy';
       const sub = document.querySelector('.subtitle');
       sub.innerHTML = isZh
-        ? 'QuickAPI（Chrome 扩展）<br>最后更新：2026 年 5 月 30 日'
-        : 'QuickAPI (Chrome Extension)<br>Last updated: May 30, 2026';
+        ? 'QuickAPI（浏览器扩展）<br>最后更新：2026 年 5 月 30 日'
+        : 'QuickAPI (Browser Extension)<br>Last updated: May 30, 2026';
     }
     window.addEventListener('hashchange', switchLang);
     switchLang(); // defaults to English
